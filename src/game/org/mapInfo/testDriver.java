@@ -1,8 +1,11 @@
 package game.org.mapInfo;
 
-import game.entities.objects.*;
-import game.test.itemCharacterDriver;
-import game.entities.characters.*;
+import game.entities.characters.Action;
+import game.entities.characters.Enemy;
+import game.entities.characters.Player;
+import game.entities.objects.Container;
+import game.entities.objects.Item;
+import game.entities.objects.Key;
 
 public class testDriver {
 	
