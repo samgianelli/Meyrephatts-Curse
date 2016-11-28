@@ -1,12 +1,15 @@
 package game.entities.characters;
 
-public abstract class Person {
+import game.entities.Entity;
+import game.org.mapInfo.Room;
+
+public abstract class Person extends Entity {
 	protected String name;
-	//protected Instance location;
+	protected Room location;
 	
 	public Person() {
 		this.name = "";
-		//this.location = new Instance();
+		this.location = null;
 	}
 	
 	public void setName(String name) {
@@ -16,14 +19,12 @@ public abstract class Person {
 	public String getName() {
 		return this.name;
 	}
-	/*
-	public void setLocation(Instance location) {
-		this.location = location;
-	}
 	
-	public Instance getLocation() {
+	public abstract void setLocation(Room room);
+	
+	public Room getLocation() {
 		return this.location;
 	}
-	*/
+	
 
 }

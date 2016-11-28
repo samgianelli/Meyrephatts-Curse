@@ -41,8 +41,9 @@ public class Action {
 		else
 		{
 			System.out.println("Player " + player.getName() + " defeated enemy " + e1.getName());
+			player.gainExperience(25);
 			e1.awardDrop(player); //give the enemy drops to the player.
-			
+			e1.die();
 		}
 	}
 }

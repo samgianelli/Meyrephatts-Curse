@@ -7,6 +7,7 @@ import javax.swing.JOptionPane;
 import game.entities.objects.Container;
 import game.entities.objects.Effect;
 import game.entities.objects.Item;
+import game.org.mapInfo.Room;
 
 public class Enemy extends Fighter {
 	private Container drops;
@@ -25,6 +26,14 @@ public class Enemy extends Fighter {
 		Enemy BoopleSnoop = new Enemy("BoopleSnoop");
 		BoopleSnoop.drops.generateContents();
 		enemies.add(BoopleSnoop); //test enemy
+		
+		Enemy PieceOfShitMarefat = new Enemy("Piece Of Shit Named Marefat");
+		PieceOfShitMarefat.drops.generateContents();
+		enemies.add(PieceOfShitMarefat);
+		
+		Enemy FluffyRabbit = new Enemy("Fluffy Rabbit");
+		FluffyRabbit.drops.generateContents();
+		enemies.add(FluffyRabbit);
 	}
 	
 	public static Enemy retrieveEnemy(String enemyName)
@@ -76,6 +85,15 @@ public class Enemy extends Fighter {
 	public Container getDrops()
 	{
 		return this.drops;
+	}
+	
+	public void setLocation(Room room) {
+		this.location = room;
+		room.addEnemy(this);
+	}
+	
+	public void die() {
+		location.removeEnemy(this);
 	}
 
 }

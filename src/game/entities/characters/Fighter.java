@@ -1,6 +1,8 @@
 package game.entities.characters;
 
-public class Fighter extends Person {
+import game.org.mapInfo.*;
+
+public abstract class Fighter extends Person {
 	protected Integer currentHealth;
 	protected boolean turn;
 	protected boolean alive;
@@ -73,28 +75,14 @@ public class Fighter extends Person {
 		return this.currentHealth;
 	}
 	
+	public void setTurn(boolean turn) {
+		this.turn = turn;
+	}
+	
 	public boolean getTurn() {
 		return this.turn;
 	}
 	
-	public boolean isPlayer()
-	{
-		return this instanceof Player;
-	}
-	
-	public void setTurn(boolean status)
-	{
-		this.turn = status;
-	}
-	
-	public boolean isTurn()
-	{
-		return this.turn;
-	}
-	
-	public void takeAction(Action action) // fill me in later
-	{
-		
-	}
+	public abstract void setLocation(Room room);
 
 }

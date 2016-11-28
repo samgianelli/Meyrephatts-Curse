@@ -1,8 +1,11 @@
 package game.entities.characters;
 
-import game.entities.objects.Item;
 import java.util.ArrayList;
+
 import javax.swing.JOptionPane;
+
+import game.entities.objects.Item;
+import game.org.mapInfo.Room;
 
 public class NPC extends Person {
 	private String advice;
@@ -40,6 +43,9 @@ public class NPC extends Person {
 		this.inventory = new ArrayList<Item>(inventory);
 	}
 	
-	
+	public void setLocation(Room room) {
+		this.location = room;
+		room.addNPC(this);
+	}
 	
 }
