@@ -1,7 +1,7 @@
 package game.entities.characters;
 
 public class Fighter extends Person {
-	protected int currentHealth;
+	protected Integer currentHealth;
 	protected boolean turn;
 	protected boolean alive;
 	protected Stats baseStats;
@@ -69,7 +69,7 @@ public class Fighter extends Person {
 		this.currentHealth = health;
 	}
 	
-	public int getHealth() {
+	public Integer getHealth() {
 		return this.currentHealth;
 	}
 	

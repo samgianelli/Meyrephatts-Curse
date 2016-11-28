@@ -1,8 +1,5 @@
 package game.entities.characters;
 
-
-import game.entities.objects.*;
-
 public abstract class Person {
 	protected String name;
 	//protected Instance location;

@@ -6,7 +6,7 @@ import game.entities.objects.*;
 public class Player extends Fighter {
 	private ArrayList<Item> inventory;
 	private ArrayList<Equipment> equippedItems;
-	private double experience;
+	private Integer experience;
 	
 	public Player() {
 		this.inventory = new ArrayList<Item>();
@@ -47,7 +47,7 @@ public class Player extends Fighter {
 		this.inventory.add(item);
 	}
 	
-	public void gainExperience(double experience) {
+	public void gainExperience(int experience) {
 		this.experience = this.experience + experience;
 	}
 	
@@ -59,7 +59,7 @@ public class Player extends Fighter {
 		return this.equippedItems;
 	}
 	
-	public double getExperience()
+	public Integer getExperience()
 	{
 		return this.experience;
 	}
