@@ -103,7 +103,7 @@ public abstract class Item {
 		this.name = newName;
 	}
 	
-	public String getname()
+	public String getName()
 	{
 		return this.name;
 	}

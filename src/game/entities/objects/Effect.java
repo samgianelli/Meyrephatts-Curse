@@ -21,7 +21,7 @@ public class Effect {
 	
 	public String getDescription()
 	{
-		return this.getDescription();
+		return this.description;
 	}
 	
 	public void displayDescription()
