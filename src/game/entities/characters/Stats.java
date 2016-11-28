@@ -3,10 +3,10 @@ package game.entities.characters;
 import java.io.Serializable;
 
 public class Stats implements Serializable {
-	private int level;
-	private int maxHealth;
-	private int attack;
-	private int defense;
+	private Integer level;
+	private Integer maxHealth;
+	private Integer attack;
+	private Integer defense;
 	
 	public Stats(boolean isBase) {
 		if(isBase) //player's base stats
@@ -33,7 +33,7 @@ public class Stats implements Serializable {
 	}
 	
 
-	public int getLevel() {
+	public Integer getLevel() {
 		return this.level;
 	}
 
@@ -41,7 +41,7 @@ public class Stats implements Serializable {
 		this.level = level;
 	}
 
-	public int getMaxHealth() {
+	public Integer getMaxHealth() {
 		return this.maxHealth;
 	}
 
@@ -49,7 +49,7 @@ public class Stats implements Serializable {
 		this.maxHealth = maxHealth;
 	}
 
-	public int getAttack() {
+	public Integer getAttack() {
 		return this.attack;
 	}
 
@@ -57,7 +57,7 @@ public class Stats implements Serializable {
 		this.attack = attack;
 	}
 
-	public int getDefense() {
+	public Integer getDefense() {
 		return this.defense;
 	}
 

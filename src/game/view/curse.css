@@ -103,7 +103,7 @@
 }
 
 .button {
-    -fx-padding: 0;   
+    -fx-padding: 0 20 0 20;   
     -fx-border-color: #000000;
     -fx-border-width: 4;
     -fx-background-radius: 0;
