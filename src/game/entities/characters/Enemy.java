@@ -50,7 +50,7 @@ public class Enemy extends Fighter {
 		{
 			player.getInventory().add(x);
 			JOptionPane.showMessageDialog(null, 
-					player.getName() + " has received " + x.getname() + " for kicking the crap out of " + this.getName() + "!", 
+					player.getName() + " has received " + x.getName() + " for kicking the crap out of " + this.getName() + "!", 
 					"Pick Up Reward", 
 					JOptionPane.PLAIN_MESSAGE);			
 		}

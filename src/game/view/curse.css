@@ -4,7 +4,7 @@
 }
 
 .background {
-    -fx-background-image: url("../../../res/background/background.jpg");
+    -fx-background-image: url("../../res/background/background.jpg");
     -fx-background-repeat: stretch;
     -fx-background-size: cover;
     -fx-background-position: center center;
@@ -56,9 +56,9 @@
 	-fx-background-color: #000000;
 	-fx-background-repeat: stretch;
 	-fx-background-size: cover;
-	-fx-font-size: 18pt;
-	-fx-font-family: "Franklin Gothic Demi";
-	-fx-text-fill: #ffffff;
+	-fx-font-size: 12pt;
+	-fx-font-family: "Franklin Gothic Book";
+	-fx-text-fill: yellow;
 	-fx-opacity: 1;
 }
 
@@ -68,7 +68,7 @@
 
 .bar-exp .bar {
     -fx-background-position: right ;
-    -fx-background-color: purple ;
+    -fx-background-color: green ;
     -fx-background-repeat: repeat-x ;
 	-fx-background-insets: 0;
 	-fx-padding: 10px;
@@ -76,7 +76,7 @@
 
 .bar-health .bar {
     -fx-background-position: right ;
-    -fx-background-color: green ;
+    -fx-background-color: red ;
     -fx-background-repeat: repeat-x ;
 	-fx-background-insets: 0;
 	-fx-padding: 10px;

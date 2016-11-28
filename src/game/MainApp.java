@@ -2,12 +2,15 @@ package game;
 
 import java.io.IOException;
 
+import game.entities.characters.Player;
+import game.entities.objects.Item;
 import game.view.GameInterfaceController;
 import game.view.InGameMenuController;
 import game.view.MainMenuController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
@@ -80,7 +83,7 @@ public class MainApp extends Application {
      * @param person the person object to be edited
      * @return true if the user clicked OK, false otherwise.
      */
-    public void showGameInterface(/*Game game*/) {
+    public void showGameInterface(Game game) {
         try {
             // Load the fxml file and create a new stage for the popup dialog.
             FXMLLoader loader = new FXMLLoader();
@@ -92,7 +95,7 @@ public class MainApp extends Application {
             
             // Give the controller access
             GameInterfaceController controller = loader.getController();
-            //controller.setGame(game);
+            controller.setGame(game);
             controller.setMainApp(this);
         } catch (IOException e) {
             e.printStackTrace();
@@ -102,7 +105,7 @@ public class MainApp extends Application {
     /**
      * Shows the main menu inside the root layout.
      */
-    public void showInGameMenu() {
+    public void showInGameMenu(Game game) {
         try {
             // Load person overview.
             FXMLLoader loader = new FXMLLoader();
@@ -115,6 +118,7 @@ public class MainApp extends Application {
             // Give the controller access to the main app.
             InGameMenuController controller = loader.getController();
 //            controller.setStage(primaryStage);
+            controller.setCurrGame(game);
             controller.setMainApp(this);
 
         } catch (IOException e) {
@@ -132,9 +136,5 @@ public class MainApp extends Application {
 
     public static void main(String[] args) {
         launch(args);
-    }
-    
-    // Temp, make Eclipse shut up
-    public class Game {
     }
 }

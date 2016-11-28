@@ -27,14 +27,14 @@ public class itemCharacterDriver {
 		System.out.println("\n" + Alex.getName() + " is going to war with " + BoopleSnoop.getName());
 		if(BoopleSnoop.getDrops().getContents().size() != 0)
 		{
-			System.out.println(BoopleSnoop.getName() + " drops " + BoopleSnoop.getDrops().getContents().get(0).getname());
+			System.out.println(BoopleSnoop.getName() + " drops " + BoopleSnoop.getDrops().getContents().get(0).getName());
 		}
 		
 		Action.beginBattle(BoopleSnoop); //Alex fights against BoopleSnoop!
 		itemCharacterDriver.displayPlayerStats(Alex);
 		System.out.println("Alex has taken damage. He has health at " + Alex.getHealth());
 		Equipment x = (Equipment) Alex.getInventory().get(0);
-		System.out.println("Alex has decided to equip " + x.getname());
+		System.out.println("Alex has decided to equip " + x.getName());
 		Alex.getEquippedItems().add(x);
 
 		//update Alex's stats

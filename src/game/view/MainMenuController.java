@@ -1,5 +1,6 @@
 package game.view;
 
+import game.Game;
 import game.MainApp;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
@@ -28,7 +29,7 @@ public class MainMenuController {
     
     @FXML
     private void handleNewGame() {
-    	mainApp.showGameInterface(/*new Game()*/);
+    	mainApp.showGameInterface(new Game());
     }
     
     @FXML
@@ -40,6 +41,9 @@ public class MainMenuController {
         alert.setContentText("This section is currently under construction.");
 
         alert.showAndWait();
+        
+        // TODO
+        //mainApp.showGameInterface(loadedGame);
     }
     
     @FXML
