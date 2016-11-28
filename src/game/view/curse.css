@@ -1,0 +1,190 @@
+.root {
+    -fx-accent: #bb0800;
+    -fx-focus-color: -fx-accent;
+}
+
+.background {
+    -fx-background-image: url("../../../res/background/background.jpg");
+    -fx-background-repeat: stretch;
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+}
+
+.panel {
+	-fx-background-color: #bba78e;
+	-fx-background-repeat: stretch;
+	-fx-background-size: cover;
+	-fx-border-color: #000000;
+    -fx-border-width: 1;
+}
+
+.panel .content {
+	-fx-background-color: #bba78e;
+	-fx-font-size: 12pt;
+	-fx-font-family: "Franklin Gothic Demi";
+	-fx-text-fill: black
+}
+
+.label {
+    -fx-font-size: 24pt;
+    -fx-font-family: "Franklin Gothic Demi";
+    -fx-text-fill: black;
+    -fx-opacity: 1;
+}
+
+.label-small {
+    -fx-font-size: 16pt;
+    -fx-font-family: "Franklin Gothic Demi";
+    -fx-text-fill: black;
+    -fx-opacity: 1;
+}
+.label-bright {
+    -fx-font-size: 32pt;
+    -fx-font-family: "GothicE";
+    -fx-text-fill: yellow;
+    -fx-opacity: 1;
+}
+
+.label-header {
+    -fx-font-size: 60pt;
+    -fx-font-family: "GothicE";
+    -fx-text-fill: yellow;
+    -fx-opacity: 1;
+}
+
+.console {
+	-fx-background-color: #000000;
+	-fx-background-repeat: stretch;
+	-fx-background-size: cover;
+	-fx-font-size: 18pt;
+	-fx-font-family: "Franklin Gothic Demi";
+	-fx-text-fill: #ffffff;
+	-fx-opacity: 1;
+}
+
+.console .content {
+    -fx-background-color: #000000;
+}
+
+.bar-exp .bar {
+    -fx-background-position: right ;
+    -fx-background-color: purple ;
+    -fx-background-repeat: repeat-x ;
+	-fx-background-insets: 0;
+	-fx-padding: 10px;
+}
+
+.bar-health .bar {
+    -fx-background-position: right ;
+    -fx-background-color: green ;
+    -fx-background-repeat: repeat-x ;
+	-fx-background-insets: 0;
+	-fx-padding: 10px;
+}
+
+.bar-mana .bar {
+    -fx-background-position: right ;
+    -fx-background-color: blue ;
+    -fx-background-repeat: repeat-x ;
+	-fx-background-insets: 0;
+	-fx-padding: 10px;
+}
+
+.split-pane-divider {
+	-fx-padding: 1.5px;
+    -fx-border-color: #1d1d1d;
+    -fx-background-color: #1d1d1d;
+}
+
+.split-pane {
+    -fx-padding: 0;
+	-fx-background-color: #1d1d1d;
+	-fx-border-color: #1d1d1d;
+}
+
+.button {
+    -fx-padding: 0;   
+    -fx-border-color: #000000;
+    -fx-border-width: 4;
+    -fx-background-radius: 0;
+    -fx-background-color: #790000;
+    -fx-font-family: "GothicE";
+    -fx-font-size: 32pt;
+	-fx-text-alignment: center;
+    -fx-text-fill: #ffff00;
+    -fx-background-insets: 0;
+}
+
+.button:hover {
+    -fx-background-color: -fx-focus-color;
+}
+
+.button:pressed, .button:default:hover:pressed {
+  -fx-background-color: -fx-focus-color;
+  -fx-font-family: "GothicE";
+  -fx-font-size: 31pt;
+}
+
+/*
+.button:focused {
+    -fx-border-color: white, white;
+    -fx-border-width: 1, 1;
+    -fx-border-style: solid, segments(1, 1);
+    -fx-border-radius: 0, 0;
+    -fx-border-insets: 1 1 1 1, 0;
+}
+*/
+
+.button:disabled, .button:default:disabled {
+    -fx-opacity: 0.4;
+    -fx-background-color: #6f6f6f;
+    -fx-text-fill: white;
+}
+
+.button:default {
+    -fx-background-color: -fx-focus-color;
+    -fx-text-fill: #ffffff;
+}
+
+/*
+.button:default:hover {
+    -fx-background-color: derive(-fx-focus-color,30%);
+}
+*/
+
+.button-lite {
+    -fx-padding: 0;   
+    -fx-border-color: #000000;
+    -fx-border-width: 0;
+    -fx-background-radius: 0;
+    -fx-background-color: transparent;
+    -fx-font-family: "GothicE";
+    -fx-font-size: 20pt;
+	-fx-text-alignment: center;
+    -fx-text-fill: #ffffff;
+    -fx-background-insets: 0;
+}
+
+.button-lite:hover {
+    -fx-text-fill: #ffffff;
+	-fx-background-color: transparent;
+	-fx-font-size: 21pt;
+}
+
+.button-lite:pressed, .button:default:hover:pressed {
+  -fx-text-fill: #ffffff;
+  -fx-font-family: "GothicE";
+  -fx-background-color: transparent;
+  -fx-font-size: 20pt;
+}
+
+.button-lite:disabled, .button:default:disabled {
+    -fx-opacity: 0.4;
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+}
+
+.button-lite:default {
+    -fx-background-color: transparent;
+    -fx-text-fill: #ffffff;
+}
