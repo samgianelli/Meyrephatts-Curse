@@ -5,7 +5,7 @@ import game.GameConstants;
 import game.MainApp;
 import game.entities.characters.Player;
 import game.entities.objects.Item;
-import javafx.beans.value.ChangeListener;
+import game.org.mapInfo.Instance;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -154,7 +154,7 @@ public class GameInterfaceController {
     public void updateGUI() {
     	updatePlayerStats(gameSession.getPlayer());
     	updateInventory(gameSession.getPlayer());
-    	updateInstance(/*game.getInstance()*/);
+    	updateInstance(gameSession.getInstance());
     	updateConsole();
     	updateMap(/* TODO */);
     }
@@ -220,7 +220,7 @@ public class GameInterfaceController {
     }
     
     // TODO
-    private void updateInstance(/* Instance instance */) {
+    private void updateInstance(Instance instance) {
 		// Testing example monster
 		monsterName1.setText("Testing A");
 		monsterLevel1.setText("Lvl 999");
