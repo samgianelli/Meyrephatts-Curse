@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import game.entities.objects.Equipment;
 import game.entities.objects.Item;
 import game.entities.objects.Key;
+import game.entities.objects.Potion;
 import game.org.mapInfo.Door;
 import game.org.mapInfo.Room;
 
@@ -13,12 +14,14 @@ public class Player extends Fighter {
 	private ArrayList<Equipment> equippedItems;
 	private ArrayList<Key> keys;
 	private Integer experience;
+	private Room currRoom;
 	
 	public Player() {
 		this.inventory = new ArrayList<Item>();
 		this.equippedItems = new ArrayList<Equipment>();
 		this.keys = new ArrayList<Key>();
 		this.experience = 0;
+		this.currRoom = null;
 	}
 	
 	public Player(String name)
@@ -52,10 +55,6 @@ public class Player extends Fighter {
 		this.equippedItems.remove(item);
 		// remove status bonus from equipped item
 		this.inventory.add(item);
-	}
-	
-	public void addKey(Key key) {
-		this.keys.add(key);
 	}
 	
 	public ArrayList<Key> getKeys() {
@@ -149,5 +148,57 @@ public class Player extends Fighter {
 		System.out.println("Next level is at: ");
 		System.out.println("---------------------------------");		
 	}
+	
+	public void interact(Item item)
+	{
+		if(item instanceof Equipment)
+		{
+			((Equipment) item).toggleEquipped(this);
+		}
+		else if(item instanceof Potion)
+		{
+			//consume the potion. add me later
+		}
+	}
+	
+	public void interact(NPC npc)
+	{
+		//BYE
+	}
+	
+	//battle against the enemy. Add more functionality here later!
+	public void interact(Enemy enemy)
+	{
+		while(enemy.getHealth() > 0 && this.getHealth() > 0)
+		{
+			this.dealDamage(10, enemy);
+			enemy.dealDamage(2, this);			
+		}
+		if(this.getHealth() <= 0)
+		{
+			System.out.println("Oh dear! You are dead!");
+			//reload last save file.
+		}
+		else
+		{
+			System.out.println("Player " + this.getName() + " defeated enemy " + enemy.getName());
+			enemy.awardDrop(this); //give the enemy drops to the player.
+		}
+	}
 
+	//literally just try to open the door. rename tryKey to interact if the bool isn't used somewhere else.
+	public void interact(Door door)
+	{
+		tryKey(door);
+	}
+	
+	public void interact(Key key)
+	{
+		if(!this.getKeys().contains(key)) //only add the key if the player does NOT have it already.
+		{
+			this.getKeys().add(key);
+		}
+	}
+	
 }
+
